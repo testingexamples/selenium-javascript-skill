@@ -112,7 +112,7 @@ See "From walkthrough to real test" below.
 This is a trimmed, real, working example (based on
 [`demo-selenium-javascript`](https://github.com/joelparkerhenderson/demo-selenium-javascript)'s
 `src/demo.js`) against the free fixture page
-[testingexamples.github.io](https://testingexamples.github.io), which
+[testingexamples.github.io](https://testingexamples.github.io/en-001/practice/), which
 exists specifically to be automated against repeatedly:
 
 ```javascript
@@ -126,7 +126,7 @@ async function demo() {
         .build();
 
     try {
-        await driver.get("https://testingexamples.github.io");
+        await driver.get("https://testingexamples.github.io/en-001/practice/");
 
         // Find an element by id.
         const elementById = await driver.findElement(By.id("id-example-1"));
@@ -204,7 +204,7 @@ describe('testingexamples.github.io fixtures', function () {
   });
 
   it('id-example-1 has the expected text', async () => {
-    await driver.get('https://testingexamples.github.io');
+    await driver.get('https://testingexamples.github.io/en-001/practice/');
     const element = await driver.findElement(By.id('id-example-1'));
     const text = await element.getText();
     assert.strictEqual(text, 'Id Example 1');
@@ -247,7 +247,7 @@ in "Learn more" below.
 
 - [`demo-selenium-javascript`](https://github.com/joelparkerhenderson/demo-selenium-javascript)
   — the locator-strategy walkthrough this skill's worked example is based
-  on, against [testingexamples.github.io](https://testingexamples.github.io).
+  on, against [testingexamples.github.io](https://testingexamples.github.io/en-001/practice/).
 - [`demo-selenium-javascript-for-google-search`](https://github.com/testingexamples/demo-selenium-javascript-for-google-search)
   — the same patterns against Google Search. **Illustrative only**: Google's
   Terms of Service restrict automated querying of Google Search, so this
@@ -261,7 +261,7 @@ in "Learn more" below.
   [nhs.wales](https://www.nhs.wales/).
 - [Selenium WebDriver documentation](https://www.selenium.dev/documentation/webdriver/)
   — the official reference.
-- [testingexamples.github.io](https://testingexamples.github.io/) — the
+- [testingexamples.github.io](https://testingexamples.github.io/en-001/practice/) — the
   free fixture page these demos target; safe to run against repeatedly.
 
 ---
